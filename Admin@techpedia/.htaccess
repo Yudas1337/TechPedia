@@ -1,0 +1,47 @@
+RewriteEngine On
+RewriteRule ^category/([A-Za-z-0-9]+) edit_kategori.php?category=$1
+RewriteRule ^del_category/([A-Za-z-0-9]+) hapus_kategori.php?del_category=$1
+
+RewriteRule ^edit_sliders/([0-9]+) edit_sliders.php?id_sliders=$1
+RewriteRule ^hapus_sliders/([0-9]+) hapus_sliders.php?id_sliders=$1
+
+RewriteRule ^edit_bab_modules/([A-Za-z-0-9]+) edit_bab_modules.php?bab_uri=$1
+RewriteRule ^del_bab_modules/([A-Za-z-0-9]+) hapus_bab_modules.php?bab_uri=$1
+
+RewriteRule ^apps_edit/([A-Za-z-0-9]+) edit_apps.php?apps_uri=$1
+RewriteRule ^apps_delete/([A-Za-z-0-9]+) hapus_apps.php?apps_uri=$1
+
+RewriteRule ^edit_modules/([A-Za-z-0-9]+) edit_modules.php?edit_modules=$1
+RewriteRule ^del_modules/([A-Za-z-0-9]+) hapus_modules.php?del_modules=$1
+
+RewriteRule ^admin_roles_edit/([0-9]+) edit_admin_role.php?id_role=$1
+RewriteRule ^admin_roles_hapus/([0-9]+) hapus_admin_role.php?id_role=$1
+
+RewriteRule ^edit_admins/([0-9]+) edit_admins.php?id_admin=$1
+RewriteRule ^hapus_admins/([0-9]+) hapus_admins.php?id_admin=$1
+
+RewriteRule ^edit_users/([0-9]+) edit_users.php?id_user=$1
+RewriteRule ^hapus_user/([0-9]+) hapus_users.php?id_user=$1
+RewriteRule ^edit_premium/([0-9]+) edit_premium.php?id_user=$1
+
+RewriteRule ^editArtikel/([A-Za-z-0-9]+) editArtikel.php?artikel_uri=$1
+RewriteRule ^hapusArtikel/([A-Za-z-0-9]+) hapusArtikel.php?artikel_uri=$1
+
+RewriteRule ^del_messages/([0-9]+) del_messages.php?id_contact=$1
+
+RewriteRule ^edit_portfolio/([0-9]+) edit_portfolio.php?id_portfolio=$1
+RewriteRule ^hapus_portfolio/([0-9]+) hapus_portfolio.php?id_portfolio=$1
+
+RewriteRule ^categoryArtikel/([A-Za-z-0-9]+) edit_kategoriArtikel.php?categoryArtikel=$1
+RewriteRule ^del_categoryArtikel/([A-Za-z-0-9]+) hapus_katArtikel.php?del_categoryArtikel=$1
+
+RewriteRule ^editServices/([A-Za-z-0-9]+) editServices.php?editServices=$1
+RewriteRule ^hapusServices/([A-Za-z-0-9]+) hapusServices.php?hapusServices=$1
+
+RewriteRule ^edit_AppsDetail/([A-Za-z-0-9]+) edit_AppsDetail.php?id_appsdetail=$1
+RewriteRule ^hapus_AppsDetail/([A-Za-z-0-9]+) hapus_AppsDetail.php?id_appsdetail=$1
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php

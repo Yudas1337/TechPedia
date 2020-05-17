@@ -1,0 +1,16 @@
+.cookie-notice.active {
+    display: none;
+}
+
+.cookie-notice {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background: #fff;
+    padding: 14px 15px 5px;
+    text-align: center;
+    z-index: 99;
+    display: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}

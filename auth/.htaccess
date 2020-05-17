@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteRule ^reset_pass/([A-Za-z-0-9]+) resetpass.php?reset_pass=$1
+RewriteRule ^activate/([A-Za-z-0-9]+) index.php?activate=$1

@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteRule ^learns/([A-Za-z-0-9]+) bab.php?learns=$1
+RewriteRule ^modul/([A-Za-z-0-9]+) isi.php?modul=$1
+RewriteRule ^mobile/([A-Za-z-0-9]+) android.php?modul=$1
+RewriteRule ^details/([A-Za-z-0-9]+) babdetail.php?details=$1
+RewriteRule ^sliders/([0-9]+) slidersandroid.php?id_sliders=$1
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
